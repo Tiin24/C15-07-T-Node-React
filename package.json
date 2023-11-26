@@ -1,0 +1,29 @@
+{
+  "name": "c15-07-t-node-react",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No-Country/C15-07-T-Node-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/No-Country/C15-07-T-Node-React/issues"
+  },
+  "homepage": "https://github.com/No-Country/C15-07-T-Node-React#readme",
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^15.1.0"
+  }
+}
