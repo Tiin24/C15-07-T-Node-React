@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "eqeqeq": [
+      "error",
+      "always"
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        // Reglas específicas para archivos JS y JSX
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
+      }
+    },
+    {
+      "files": [
+        "*.mjs"
+      ],
+      "rules": {
+        // Reglas específicas para módulos ES
+        "no-process-env": "off"
+      }
+    }
+  ]
+}
