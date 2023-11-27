@@ -1,18 +1,18 @@
-const { execSync } = require("child_process");
+const { execSync } = require('child_process');
 
 // Obtener el scope como argumento (frontend o backend)
 const scope = process.argv[2];
-const allowedDirectory = `packages/${scope}`;
+const allowedDirectory = `${scope}`;
 
 // Comando para obtener una lista de archivos en staging
-const getStagedFilesCommand = "git diff --cached --name-only";
+const getStagedFilesCommand = 'git diff --cached --name-only';
 
 try {
   // Ejecutar el comando y obtener la lista de archivos
   const stagedFiles = execSync(getStagedFilesCommand)
     .toString()
     .trim()
-    .split("\n");
+    .split('\n');
 
   // Verificar cada archivo
   for (const file of stagedFiles) {
@@ -28,6 +28,6 @@ try {
     `Todos los archivos en el commit están permitidos para el scope "${scope}".`
   );
 } catch (error) {
-  console.error("Ocurrió un error al verificar los archivos:", error);
+  console.error('Ocurrió un error al verificar los archivos:', error);
   process.exit(1);
 }

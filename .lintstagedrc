@@ -1,7 +1,7 @@
 {
-  "packages/frontend/**/*": "node scripts/verifyScope.js frontend",
-  "packages/backend/**/*": "node scripts/verifyScope.js backend",
-  "*.js": ["prettier --write", "eslint --fix"],
+  "frontend/**/*": "node scripts/verifyScope.js frontend",
+  "backend/**/*": "node scripts/verifyScope.js backend",
+  "frontend/*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix"],
   "*.json": ["prettier --write"],
   "*.ts": ["prettier --write", "eslint --fix"],
   "*.html": ["eslint", "prettier --write"],
