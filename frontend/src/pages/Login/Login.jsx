@@ -21,7 +21,10 @@ function Login() {
       <form
         className='mx-auto flex h-full w-full flex-col justify-between bg-[base-100] px-4 py-10 lg:w-1/2 lg:p-28'
         onSubmit={handleSubmit(onSubmit)}>
-        <h1 className='mx-auto mb-2 text-xl font-semibold'>Condominium</h1>
+        <h1 className='mx-auto mb-2 flex items-center gap-2 text-xl font-semibold'>
+          <img src='condominium.svg' alt='Condominium' className='h-8' />
+          Condominium
+        </h1>
 
         <div className='mx-auto flex w-full max-w-[550px] flex-col'>
           <div className='mb-2 flex w-full flex-col'>
