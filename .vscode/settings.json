@@ -5,6 +5,14 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "conventionalCommits.scopes": ["frontend", "backend"],
-  "editor.inlineSuggest.showToolbar": "onHover"
+  "conventionalCommits.scopes": ["frontend", "backend", "testing"],
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass"]
 }
