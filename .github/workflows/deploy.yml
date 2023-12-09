@@ -1,9 +1,14 @@
-name: Copy React Build to Backend
+name: Copy React Build to Backend and Deploy
 on:
+  pull_request:
+    types:
+      - closed
   push:
+    branches: [main]
     paths:
       - 'frontend/**'
       - 'backend/**'
+      - '.github/workflows/deploy.yml'
 
 jobs:
   build-and-deploy:
@@ -35,6 +40,6 @@ jobs:
         run: npm i -g @railway/cli
 
       - name: Deploy
-        run: railway up -w backend
+        run: npm run deploy -w backend
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
