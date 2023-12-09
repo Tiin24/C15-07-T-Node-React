@@ -15,7 +15,8 @@
     "prepare": "husky install",
     "dev": "npm run dev -w frontend",
     "devback": "npm run build && npm run devback -w backend",
-    "move-statics": "npm run build && cp -R frontend/dist/* backend/public/"
+    "move-statics": "npm run build && cp -R frontend/dist/* backend/public/",
+    "deploy": "npm run deploy -w backend"
   },
   "repository": {
     "type": "git",
