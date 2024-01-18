@@ -13,6 +13,7 @@
     "test:coverage": "npm run test:coverage -w frontend",
     "build": "npm run build -w frontend",
     "prepare": "husky install",
+    "create-hook": "husky add .husky/pre-commit \"npm test\"",
     "dev": "npm run dev -w frontend",
     "devback": "npm run build && npm run devback -w backend",
     "move-statics": "npm run build && cp -R frontend/dist/* backend/public/",
